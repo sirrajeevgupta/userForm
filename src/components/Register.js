@@ -76,7 +76,7 @@ const Register = () => {
       setUser('');
       setPwd('');
       setMatchPwd('');
-      navigate('/login');
+      navigate('/');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No server response');
@@ -218,7 +218,7 @@ const Register = () => {
         <br />
         <span className='line'>
           {/* put router link here */}
-          <Link to='/login'>Sign In</Link>
+          <Link to='/'>Sign In</Link>
         </span>
       </p>
     </section>

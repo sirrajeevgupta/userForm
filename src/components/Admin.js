@@ -7,7 +7,7 @@ const Admin = () => {
       <br />
       <p>You must have been assigned an Admin role.</p>
       <div className='flexGrow'>
-        <Link to='/'>Home</Link>
+        <Link to='/home'>Home</Link>
       </div>
     </section>
   );

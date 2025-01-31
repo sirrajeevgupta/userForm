@@ -9,7 +9,7 @@ const Login = () => {
   const { setAuth } = useAuth();
   const location = useLocation;
   const navigate = useNavigate();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || '/home';
 
   const userRef = useRef();
   const errRef = useRef();
@@ -83,7 +83,6 @@ const Login = () => {
         <input
           type='password'
           id='password'
-          ref={userRef}
           autoComplete='off'
           required
           value={pwd}
