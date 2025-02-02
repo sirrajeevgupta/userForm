@@ -45,7 +45,7 @@ const Login = () => {
       setPwd('');
       navigate(from, { replace: true });
     } catch (err) {
-      if (!err.response) {
+      if (!err?.response) {
         setErrMsg('No server response');
       } else if (err.response?.data?.message) {
         setErrMsg(err.response.data.message);

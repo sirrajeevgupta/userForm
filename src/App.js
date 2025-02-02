@@ -25,11 +25,11 @@ function App() {
         <Route index element={<Login />} />
         <Route path='register' element={<Register />} />
         <Route path='linkpage' element={<LinkPage />} />
-        <Route path='unauthorized' element={<Unauthorized />}></Route>
+        <Route path='unauthorized' element={<Unauthorized />} />
 
         {/* public routes  */}
         <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-          <Route path='home' element={<Home />}></Route>
+          <Route path='home' element={<Home />} />
         </Route>
 
         <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
@@ -46,7 +46,8 @@ function App() {
           <Route path='lounge' element={<Lounge />} />
         </Route>
 
-        <Route path='*' element={<Missing />}></Route>
+        {/* catch all */}
+        <Route path='*' element={<Missing />} />
       </Route>
     </Routes>
   );
