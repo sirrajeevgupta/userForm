@@ -7,8 +7,9 @@ const LOGIN_URL = '/auth';
 
 const Login = () => {
   const { setAuth } = useAuth();
-  const location = useLocation;
+
   const navigate = useNavigate();
+  const location = useLocation();
   const from = location.state?.from?.pathname || '/home';
 
   const userRef = useRef();
